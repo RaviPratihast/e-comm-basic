@@ -1,0 +1,60 @@
+const items = [
+  {
+    id: 1,
+    name: "kala chasma",
+    price: 1000,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: true,
+  },
+  {
+    id: 2,
+    name: "laal chhadi",
+    price: 500,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: true,
+  },
+  {
+    id: 3,
+    name: "jalebi",
+    price: 50,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: true,
+  },
+  {
+    id: 4,
+    name: "japani joota",
+    price: 10000,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: true,
+  },
+  {
+    id: 5,
+    name: "kala ghora",
+    price: 150000,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: true,
+  },
+  {
+    id: 6,
+    name: "narikol",
+    price: 25,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: false,
+  },
+  {
+    id: 6,
+    name: "kothal",
+    price: 30,
+    qty: 0,
+    totalProductPrice: 0,
+    inStock: false,
+  },
+];
+
+export { items };

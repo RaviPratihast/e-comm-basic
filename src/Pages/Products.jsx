@@ -1,9 +1,7 @@
-import React from 'react'
-
+import React from "react";
+// import { useProduct } from "../context/ecomm-context";
 function Products() {
-  return (
-    <div>Products</div>
-  )
+  // const { state, dispatch } = useProduct();
 }
 
-export default Products
+export default Products;
