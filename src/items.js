@@ -48,7 +48,7 @@ const items = [
     inStock: false,
   },
   {
-    id: 6,
+    id: 7,
     name: "kothal",
     price: 30,
     qty: 0,
