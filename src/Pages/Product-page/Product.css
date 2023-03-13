@@ -62,7 +62,11 @@
   position: relative;
   /* display: flex; */
 }
-.item-container > button {
+.item-button-container{
+  display: flex;
+  gap: 4px;
+}
+.item-container > .item-button-container > button {
   /* padding: 10px 30px;
     /* border: none; */
   /* border: 1px solid black; */

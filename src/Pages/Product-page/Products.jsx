@@ -26,30 +26,32 @@ function Products() {
               <h1>{name}</h1>
               {inStock ? <p> Price: {price}</p> : <p>Out Of Stock</p>}
 
-              {inStock && (
-                <button
-                  onClick={() =>
-                    dispatch({
-                      type: "ADD_TO_CART",
-                      payload: { id: id, name: name, qty: 1, price: price },
-                    })
-                  }
-                >
-                  Add To Cart
-                </button>
-              )}
-              {inStock && (
-                <button
-                  onClick={() =>
-                    dispatch({
-                      type: "ADD_TO_WISHLIST",
-                      payload: { id: id, name: name, qty: 1, price: price },
-                    })
-                  }
-                >
-                  Add To Wishlist
-                </button>
-              )}
+              <div className="item-button-container">
+                {inStock && (
+                  <button
+                    onClick={() =>
+                      dispatch({
+                        type: "ADD_TO_CART",
+                        payload: { id: id, name: name, qty: 1, price: price },
+                      })
+                    }
+                  >
+                    Add To Cart
+                  </button>
+                )}
+                {inStock && (
+                  <button
+                    onClick={() =>
+                      dispatch({
+                        type: "ADD_TO_WISHLIST",
+                        payload: { id: id, name: name, qty: 1, price: price },
+                      })
+                    }
+                  >
+                    Add To Wishlist
+                  </button>
+                )}
+              </div>
             </div>
           );
           // console.log(id,name,inStock,price);
