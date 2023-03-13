@@ -30,14 +30,7 @@ export function reducer(state, action) {
       if (itemIsPresent(state.wishlist)) {
         return {
           ...state,
-          wishlist: state.wishlist.map((wishlistItem) => {
-            // return wishlistItem.id === action.payload.id
-            //   ? { ...wishlistItem, qty: wishlistItem.qty + action.payload.qty }
-            //   : wishlistItem;
-            return wishlistItem.id === action.payload.id
-              ? { ...wishlistItem, qty: wishlistItem.qty + action.payload.qty }
-              : wishlistItem;
-          }),
+          wishlist: [...state.wishlist],
         };
       }
       return {

@@ -8,7 +8,7 @@ function Wishlist() {
         return (
           <div key={id} className="item-container">
             <h1>{name}</h1>
-            <p>Qty: {qty}</p>
+            {/* <p>Qty: {qty}</p> */}
             <p> Price: {price}</p>
             <button
               onClick={() =>
