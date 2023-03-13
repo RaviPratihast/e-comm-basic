@@ -25,6 +25,7 @@ function Products() {
             <div key={id} className="item-container">
               <h1>{name}</h1>
               {inStock ? <p> Price: {price}</p> : <p>Out Of Stock</p>}
+
               {inStock && (
                 <button
                   onClick={() =>
@@ -35,6 +36,18 @@ function Products() {
                   }
                 >
                   Add To Cart
+                </button>
+              )}
+              {inStock && (
+                <button
+                  onClick={() =>
+                    dispatch({
+                      type: "ADD_TO_WISHLIST",
+                      payload: { id: id, name: name, qty: 1, price: price },
+                    })
+                  }
+                >
+                  Add To Wishlist
                 </button>
               )}
             </div>
