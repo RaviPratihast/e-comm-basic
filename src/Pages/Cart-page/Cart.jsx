@@ -1,13 +1,15 @@
 import React from "react";
-import { useProduct } from "../context/ecomm-context";
+import { useProduct } from "../../context/ecomm-context";
+import "./Cart.css"
 
 function Cart() {
   const { state, dispatch } = useProduct();
-  return <div className="products-container">
+  return <div className="cart-container">
     {state.cart.map(({ id, name, qty, price }) => {
     return (
-      <div key={id} className="item-container">
+      <div key={id} className="item-container item-in-cart">
         <h1>{name}</h1>
+        <p>Qty: {qty}</p>
         <p> Price: {price}</p>
         <button
           onClick={() =>

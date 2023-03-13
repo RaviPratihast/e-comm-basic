@@ -12,22 +12,26 @@ const initialState = {
 };
 
 function reducer(state, action) {
+  const itemIsPresent = state.cart.some(
+    (cartItem) => cartItem.id === action.payload.id
+  );
   switch (action.type) {
     case "ADD_TO_CART":
-      // return {
-      //   ...state,
-      //   cart:[...state.cart,action.payload],
-      // };
-      const { payload } = action;
+      if (itemIsPresent) {
+        return {
+          ...state,
+          cart: state.cart.map((cartItem) => {
+            return cartItem.id === action.payload.id
+              ? { ...cartItem, qty: cartItem.qty + action.payload.qty }
+              : cartItem;
+          }),
+        };
+      }
       return {
         ...state,
-        cart:state.cart.map((cartItem)=>{
-          if(cartItem.id===payload.id){
-            
-          }
-        })
-      }
-      
+        cart: [...state.cart, action.payload],
+      };
+
     default:
       return state;
   }

@@ -39,6 +39,7 @@ function Products() {
               )}
             </div>
           );
+          // console.log(id,name,inStock,price);
         })}
       </div>
     </div>
